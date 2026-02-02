@@ -13,39 +13,78 @@ body {
 /* =========================================================
    BARRA SUPERIOR (COMPARTIDA)
 ========================================================= */
+/* =========================================================
+   BARRA SUPERIOR (MISMO COLOR, MEJOR DISEÑO)
+========================================================= */
 nav {
     position: fixed;
     top: 0;
     width: 100%;
-    background: #13a88f;
+    background: #13a88f; /* TU COLOR */
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
     z-index: 1000;
 }
 
 .nav-contenedor {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 15px 40px;
+    padding: 16px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+/* ===== LOGO ===== */
 .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     color: white;
     font-size: 22px;
     font-weight: bold;
 }
 
+/* ===== MENÚ ===== */
+.menu {
+    display: flex;
+    gap: 30px;
+}
+
 .menu a {
+    position: relative;
     color: white;
     text-decoration: none;
-    margin-left: 25px;
     font-size: 16px;
+    font-weight: 500;
+    padding: 6px 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Línea inferior elegante */
+.menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0%;
+    height: 2px;
+    background: rgba(255,255,255,0.9);
+    transition: width 0.3s ease;
 }
 
 .menu a:hover {
-    text-decoration: underline;
+    opacity: 0.85;
 }
+
+.menu a:hover::after {
+    width: 100%;
+}
+
+/* Opción activa */
+.menu a.active::after {
+    width: 100%;
+}
+
 
 /* Espacio para menú fijo */
 .espacio-menu {
@@ -319,6 +358,78 @@ nav {
     width: auto;
 }
 
+/* =========================================================
+   SEPARADOR DE SECCIÓN
+========================================================= */
+.separador-seccion {
+    position: relative;
+    height: 280px;
+    background: url("airlok 3.jpeg") center / cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.separador-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+}
+
+.separador-contenido {
+    position: relative;
+    text-align: center;
+    color: white;
+    z-index: 2;
+}
+
+.separador-contenido h2 {
+    font-size: 2.6rem;
+    font-weight: bold;
+    margin: 15px 0 0;
+}
+
+/* Etiqueta tipo badge */
+.badge {
+    display: inline-block;
+    padding: 6px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #e30613;
+    background: rgba(227,6,19,0.12);
+    border-radius: 6px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.separador-servicios {
+    background: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.separador-servicios h2 {
+    font-size: 2.5rem;
+    letter-spacing: 3px;
+    color: #111;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: relative;
+}
+
+/* Línea decorativa debajo del texto */
+.separador-servicios h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #0a5cff; /* azul industrial */
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+
 
 /* ANIMACIÓN */
 @keyframes fade {
@@ -330,6 +441,7 @@ nav {
         opacity: 1;
         transform: translateY(0);
     }
+
 
 
 }
