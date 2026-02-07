@@ -405,7 +405,7 @@ nav {
 
 .separador-servicios {
     background: #ffffff;
-    padding: 60px 20px;
+    padding: 20px 20px;
     text-align: center;
 }
 
@@ -444,4 +444,97 @@ nav {
 
 
 
+}
+
+@media (max-width: 768px) {
+
+    /* ===== NAVBAR ===== */
+    .nav-contenedor {
+        padding: 12px 20px;
+    }
+
+    .menu {
+        gap: 15px;
+    }
+
+    .menu a {
+        font-size: 14px;
+    }
+
+    .logo span {
+        font-size: 18px;
+    }
+
+    /* ===== ESPACIO MENÚ ===== */
+    .espacio-menu {
+        height: 55px;
+    }
+
+    /* ===== HERO PRINCIPAL ===== */
+    .hero {
+        height: calc(100vh - 55px);
+    }
+
+    .hero-content {
+        left: 20px;
+        bottom: 80px;
+        max-width: 90%;
+    }
+
+    .hero-content h1 {
+        font-size: 30px;
+        line-height: 1.2;
+    }
+
+    .hero-content p {
+        font-size: 15px;
+    }
+
+    /* ===== BOTONES ===== */
+    .botones a {
+        padding: 12px 20px;
+        margin-bottom: 10px;
+        display: inline-block;
+    }
+
+    /* ===== SEPARADOR SERVICIOS ===== */
+    .separador-servicios {
+        padding: 20px 15px;
+    }
+
+    .separador-servicios h2 {
+        font-size: 1.8rem;
+        letter-spacing: 2px;
+    }
+
+    /* ===== HERO TEXTO DINÁMICO ===== */
+    .hero-contenido h1 {
+        font-size: 1.9rem;
+    }
+
+    .contador {
+        font-size: 12px;
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+        padding: 60px 20px 40px;
+    }
+
+    .footer-contenedor {
+        gap: 30px;
+    }
+
+    /* ===== WHATSAPP ===== */
+    .whatsapp-float {
+        width: 52px;
+        height: 52px;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .whatsapp-float img {
+        width: 28px;
+        height: 28px;
+    }
 }
